@@ -1,0 +1,27 @@
+:root {
+    --text-color: #333;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 1.6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+}
