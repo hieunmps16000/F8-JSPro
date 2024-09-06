@@ -1,3 +1,4 @@
-import { alternateSum } from "./functions.js";
+import { findLongestWord } from "./functions.js";
 
-console.log(alternateSum([10, 4, 6, 8]));
+console.log(findLongestWord(['Hieu', 'Nhi', 'HieuNhi']));
+console.log(findLongestWord(['abc', 'Hieu', 'Nhi', 'abcd']));

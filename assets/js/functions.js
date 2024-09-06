@@ -62,3 +62,20 @@ export function alternateSum(arr) {
     }
     return sum;
 }
+
+
+
+
+/**
+ * Viết hàm findLongestWord nhận vào một mảng các chuỗi và trả về chuỗi dài nhất trong mảng đó. Nếu có nhiều chuỗi có độ dài giống nhau và là dài nhất, trả về chuỗi xuất hiện đầu tiên.
+ */
+
+export function findLongestWord(str) {
+    let maxString = str[0];
+    for (let i = 0; i < str.length - 1; i++) {
+        if (maxString.length < str[i + 1].length) {
+            maxString = str[i + 1];
+        }
+    }
+    return maxString;
+}
