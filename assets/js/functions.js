@@ -20,6 +20,9 @@ export function compressString(str) {
     return compress;
 }
 
+
+
+
 /**
  * 2. Viết hàm calculateGrade để tính điểm trung bình từ một mảng điểm số và trả về xếp loại dựa trên điểm trung bình đó. Xếp loại được định nghĩa như sau:
     A: Điểm trung bình từ 90 trở lên
@@ -43,4 +46,19 @@ export function calculateGrade(scores) {
     if (average >= 70) return 'C';
     if (average >= 60) return 'D';
     return 'F';
+}
+
+
+
+
+/**
+ * Viết hàm alternateSum để tính “tổng xen kẽ” từ một mảng số. Trong “tổng xen kẽ”, bạn sẽ cộng số ở vị trí chẵn và trừ số ở vị trí lẻ trong mảng.
+ */
+
+export function alternateSum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += i % 2 == 0 ? arr[i] : - arr[i];
+    }
+    return sum;
 }
