@@ -1,4 +1,3 @@
-import { findLongestWord } from "./functions.js";
+import { compressString } from "./functions.js";
 
-console.log(findLongestWord(['Hieu', 'Nhi', 'HieuNhi']));
-console.log(findLongestWord(['abc', 'Hieu', 'Nhi', 'abcd']));
+console.log(compressString('aaabbc'));
