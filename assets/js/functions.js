@@ -161,3 +161,22 @@ export function findMissingNumber(arr, n) {
 
     return expectedSum - actualSum;
 }
+
+
+
+
+/**
+ * Write a function findMissingNumber that takes an array nums containing consecutive positive integers from 1 to n, but one number is missing. The function should return the missing positive integer.
+ */
+
+export function findMissingNumber2(nums) {
+    let n = nums.length + 1;
+    let expectSum = n * (n + 1) / 2;
+    let actualSum = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        actualSum += nums[i];
+    }
+
+    return expectSum - actualSum;
+}
