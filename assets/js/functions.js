@@ -4,10 +4,10 @@
  * 1. Viết hàm compressString để rút gọn một chuỗi bằng cách thay thế các nhóm ký tự liên tiếp giống nhau bằng một ký tự đó kèm theo số lần xuất hiện liên tiếp của ký tự đó.
 */
 
+// aaabbc => a3b2c1
 export function compressString(str) {
-    let compress = '';
     let count = 1;
-
+    let compress = '';
     for (let i = 0; i < str.length; i++) {
         if (str[i] === str[i + 1]) {
             count++;
@@ -16,7 +16,6 @@ export function compressString(str) {
             count = 1;
         }
     }
-
     return compress;
 }
 
