@@ -79,3 +79,52 @@ export function findLongestWord(str) {
     }
     return maxString;
 }
+
+
+
+
+// Finds the Greatest Common Divisor (GCD) of two numbers using Euclid's algorithm.
+export function findGCD(a, b) {
+    if (a < 0 || a % 1 !== 0 || b < 0 || b % 1 !== 0) {
+        return "Both numbers a and b must be positive integers."
+    }
+
+    if (a < b) {
+        let temp = a;
+        a = b;
+        b = temp;
+    }
+
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+
+
+
+// Finds prime
+export function isPrime(value) {
+    if (value <= 1) return false;
+    for (let i = 2; i*i <= value; i++) {
+        if (value % i === 0) return false
+    }
+    return true;
+}
+
+
+
+
+// Is it an ascending array of numbers?
+export function isAscending(numbers) {
+    if (numbers.length <= 1) return false;
+    for (let i = 0; i < numbers.length - 1; i++) {
+        let current = numbers[i];
+        let next = numbers[i + 1]
+        if (current >= next) return false;
+    }
+    return true;
+}
