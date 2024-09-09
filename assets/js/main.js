@@ -1,4 +1,3 @@
-import { isPalindrome } from "./functions.js";
+import { findMissingNumber } from "./functions.js";
 
-console.log(isPalindrome('abcdcba')); // true
-console.log(isPalindrome('hello')); // false
+console.log(findMissingNumber([1, 2, 4, 5, 6, 3, 8], 8)); // 7

@@ -145,3 +145,19 @@ export function isPalindrome(str) {
     }
     return true;
 }
+
+
+
+
+/**
+ * Write a function findMissingNumber to find the missing number in a sequence of numbers from 1 to n. The input array contains numbers from 1 to n but is missing one number, with no duplicates.
+ */
+export function findMissingNumber(arr, n) {
+    let expectedSum = n * (n + 1) / 2;
+    let actualSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        actualSum += arr[i];
+    }
+
+    return expectedSum - actualSum;
+}
