@@ -127,3 +127,21 @@ export function isAscending(numbers) {
     }
     return true;
 }
+
+
+
+
+/**
+ * Write a function isPalindrome to check if a string is a palindrome. A string is considered a palindrome if reading it from left to right or from right to left results in the same sequence.
+ */
+
+export function isPalindrome(str) {
+    let i = 0;
+    let j = str.length - 1;
+    while(i < j) {
+        if (str[i] !== str[j]) return false;
+        i++;
+        j--;
+    }
+    return true;
+}
