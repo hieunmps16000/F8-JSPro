@@ -1,3 +1,7 @@
-import { findMissingNumber2 } from "./functions.js";
+let student = {
+    name: "Nguyen Van A"
+}
 
-console.log(findMissingNumber2([1, 2, 4, 5, 6, 3, 8])); // 7
+student.name = 'Abc'
+
+console.log(student.name);
