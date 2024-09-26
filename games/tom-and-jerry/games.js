@@ -1,3 +1,10 @@
+function battleRound(attacker, defender) {
+    attacker.attack(defender);
+    if (defender.isAlive() && attacker.isAlive()) {
+        defender.attack(attacker);  
+    } 
+}
+
 export function battle(char1, char2) {
     let round = 1;
     while (char1.isAlive() && char2.isAlive()) {
@@ -12,9 +19,4 @@ export function battle(char1, char2) {
     const winner = char1.isAlive() ? char1 : char2;
     console.log(`${winner.name} chiến thắng!`);
     return winner;
-}
-
-function battleRound(attacker, defender) {
-    attacker.attack(defender);
-    if (defender.isAlive()) defender.attack(attacker);
 }
