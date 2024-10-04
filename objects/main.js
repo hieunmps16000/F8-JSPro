@@ -1,4 +1,4 @@
-// Tạo hàm findMostFrequentNumber
+// ========== Tạo hàm findMostFrequentNumber ==========
 
 /**
  * Viết hàm findMostFrequentNumber 
@@ -17,15 +17,45 @@ function findMostFrequentNumber(arr) {
         } else {
             storage[element] = 1;
         }
-        
+
         if (storage[element] > topView) {
             topView = storage[element];
             topElement = element;
         }
     }
-
     return topElement;
-
 }
 
 // console.log(findMostFrequentNumber(['Mango', 'Apple', 'Strawberry', 'Apple']));
+
+
+
+// ========== Tạo hàm removeDuplicates ==========
+
+/**
+ * Viết hàm removeDuplicates 
+ * nhận vào một mảng và trả về một mảng mới mà không có bất kỳ phần tử trùng lặp nào từ mảng ban đầu.
+ */
+
+function removeDuplicates(arr) {
+    let storage = {};
+    let result = [];
+
+    for (let value of arr) {
+        if (storage[value]) {
+            storage[value]++;
+        } else {
+            storage[value] = 1;
+        }
+
+        if (storage[value] > 1) {
+            arr.includes(value);
+        } else {
+            result.push(value)
+        }
+    }
+
+    return result;
+}
+
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
