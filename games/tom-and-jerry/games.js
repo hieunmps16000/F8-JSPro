@@ -11,8 +11,14 @@ export function battle(char1, char2) {
         console.log(`Vòng ${round}:`);
         if (char1.speed > char2.speed) {
             battleRound(char1, char2)
-        } else {
+        } else if (char2.speed > char1.speed) {
             battleRound(char2, char1);
+        } else {
+            if (Math.random() < 0.5) {
+                battleRound(char1, char2);
+            } else {
+                battleRound(char2, char1);
+            }
         }
         round++;
     }
