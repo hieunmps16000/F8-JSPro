@@ -38,24 +38,13 @@ function findMostFrequentNumber(arr) {
  */
 
 function removeDuplicates(arr) {
-    let storage = {};
-    let result = [];
-
-    for (let value of arr) {
-        if (storage[value]) {
-            storage[value]++;
-        } else {
-            storage[value] = 1;
-        }
-
-        if (storage[value] > 1) {
-            arr.includes(value);
-        } else {
-            result.push(value)
+    let unique = [];
+    for (let element of arr) {
+        if (!unique.includes(element)) {
+            unique.push(element);
         }
     }
-
-    return result;
+    return unique;
 }
 
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
