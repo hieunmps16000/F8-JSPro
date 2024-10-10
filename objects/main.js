@@ -47,4 +47,29 @@ function removeDuplicates(arr) {
     return unique;
 }
 
-console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
+
+
+// ========== Tạo hàm forEach2 ==========
+
+/**
+ * Những kiến thức cần nắm
+ * Object Prototype để tạo phương thức forEach2
+ */
+
+Object.prototype.forEach2 = function(callback, thisValue) {
+    const length = this.length;
+    for (let i = 0; i < length; i++) {
+        if (i in this) {
+            callback.call(thisValue, this[i], i, this);
+        }
+    }
+}
+
+
+const colors = ['red', 'green', 'blue'];
+
+colors.forEach(function(color, index, array) {
+    console.log(color, index, array);
+    console.log(this)
+}, {id: 123});
